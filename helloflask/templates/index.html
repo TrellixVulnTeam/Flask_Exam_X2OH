@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+	<h1>수능일까지 {{ countdown.days }}일</h1>
+	<hr>
+	{% for comment in comments %}
+		<h3>{{ comment.writer }}</h3>
+		{{ comment.content }}<br><br>
+		<hr>
+	{% endfor %}
+	{% if page > 1 %}
+	<a href="/?page={{ page-1 }}">이전</a>
+	{% endif %}
+
+	<a href="/?page={{ page+1 }}">다음</a>
+{% endblock %}

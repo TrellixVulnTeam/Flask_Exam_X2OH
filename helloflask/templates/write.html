@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+	<h1>Write</h1>
+	<form action="/post_comment" method="post">
+		<input type="text" name="writer" placeholder="작성자"><br><br>
+		<textarea name="content" rows="2" cols="80" placeholder="덧글 내용"></textarea><br><br>
+		<input type="submit" value="글쓰기">
+	</form>
+{% endblock %}
